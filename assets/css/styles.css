@@ -47,8 +47,8 @@ main {
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 100vh;
-  padding: 0 80px;
+  min-height: calc(100vh - 160px);
+  padding: 80px;
 }
 
 #logo {
