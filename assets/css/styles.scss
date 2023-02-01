@@ -33,7 +33,7 @@ html[data-theme="light"] {
 html {
   font-size: var(--root-size);
   transition: all 0.3s ease-out;
-  min-width: 25rem;
+  min-width: 20rem;
 
   &[data-theme="dark"] {
     --color-primary: #7995f2;
@@ -84,7 +84,7 @@ body {
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 100%;
   justify-items: center;
-  min-height: 100vh;
+  min-height: 90vh;
   font-family: var(--body-font-family), var(--fallback-font-family), sans-serif;
   padding-left: 1rem;
   padding-right: 1rem;
