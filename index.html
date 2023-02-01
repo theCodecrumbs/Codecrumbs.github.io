@@ -1,34 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=5"
-    />
-    <title>TheCodeCrumbs | Learn How To Code</title>
-    <link rel="canonical" href="https://thecodecrumbs.com" />
-    <meta property="og:title" content="TheCodeCrumbs | Learn How To Code" />
-    <meta property="og:url" content="https://thecodecrumbs.com" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Codecrumbs | Learn How To Code</title>
+    <link rel="canonical" href="https://www.codecrumbs.com" />
+
+    <meta property="og:title" content="Codecrumbs | Learn How To Code" />
+    <meta property="og:url" content="https://www.codecrumbs.com" />
+
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="https://thecodecrumbs.com" />
-    <meta name="twitter:title" content="TheCodeCrumbs | Learn How To Code" />
+    <meta name="twitter:site" content="https://www.codecrumbs.com" />
+    <meta name="twitter:title" content="Codecrumbs | Learn How To Code" />
 
     <meta property="og:image" content="/assets/images/OG-image.jpg" />
     <meta name="twitter:image" content="/assets/images/OG-image.jpg" />
 
     <meta
       name="description"
-      content="TheCodeCrumbs | A place where you can learn how to code through easily digestible code crumbs."
+      content="A place where you can learn how to code through easily digestible code crumbs."
     />
     <meta
       property="og:description"
-      content="TheCodeCrumbs | A place where you can learn how to code through easily digestible code crumbs."
+      content="A place where you can learn how to code through easily digestible code crumbs."
     />
     <meta
       property="twitter:description"
-      content="TheCodeCrumbs | A place where you can learn how to code through easily digestible code crumbs."
+      content="A place where you can learn how to code through easily digestible code crumbs."
     />
 
     <link
@@ -109,57 +108,145 @@
     <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
     <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
 
-    <meta name="author" content="TheCodeCrumbs" />
+    <meta name="author" content="Codecrumbs" />
+    <link
+      rel="stylesheet"
+      href="https://sibforms.com/forms/end-form/build/sib-styles.css"
+    />
     <link rel="stylesheet" href="assets/css/styles.css" />
-    <script
-      src="https://kit.fontawesome.com/9389365097.js"
-      crossorigin="anonymous"></script>
   </head>
 
   <body>
-    <main>
-      <a href="/" id="logo" class="Home">
-        <img src="/assets/images/Logo.svg" alt="TheCodeCrumbs Logo" />
+    <header>
+      <a href="/" class="logo-container">
+        <img
+          src="/assets/images/logo.svg"
+          loading="lazy"
+          alt="Codecrumbs Logo"
+          class="logo"
+        />
+        <img
+          src="/assets/images/logo-white.svg"
+          loading="lazy"
+          alt="Codecrumbs Logo"
+          class="logo-white"
+        />
       </a>
 
+      <span class="theme">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+      </span>
+    </header>
+    <main>
+      <h1 data-value="coming soon!">‎‎‎‎‎‎‎‎‎‎‎‎</h1>
+    </main>
+
+    <footer>
       <div class="social-links">
         <a
           class="youtube"
           href="https://www.youtube.com/channel/UCvs6YXvoUSyxjxPVVCCb5HA"
           target="_blank"
         >
-          <i class="fab fa-youtube"></i>
+          <i class="fab fa-youtube" aria-hidden="true"></i>
         </a>
         <a
           class="twitter"
           href="https://twitter.com/TheCodeCrumbs"
           target="_blank"
         >
-          <i class="fab fa-twitter"></i>
+          <i class="fab fa-twitter" aria-hidden="true"></i>
         </a>
         <a
           class="instagram"
           href="https://www.instagram.com/thecodecrumbs"
           target="_blank"
         >
-          <i class="fab fa-instagram"></i>
+          <i class="fab fa-instagram" aria-hidden="true"></i>
         </a>
         <a
           class="facebook"
           href="https://www.facebook.com/thecodecrumbs"
           target="_blank"
         >
-          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-facebook-f" aria-hidden="true"></i>
         </a>
         <a
           class="tiktok"
-          href="https://www.tiktok.com/@thecodecrumbs"
+          href="https://www.tiktok.com/@codecrumbs"
           target="_blank"
         >
-          <i class="icon-tik-tok-icon"></i>
+          <i class="fab fa-tiktok"></i>
         </a>
       </div>
-      <a class="email" href="mailto:info@thecodecrumbs.com">info@thecodecrumbs.com</a>
-    </main>
+    </footer>
+    <script>
+      var storedTheme = localStorage.getItem("theme");
+
+      if (storedTheme) {
+        document.documentElement.setAttribute("data-theme", storedTheme);
+      } else {
+        if (
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches
+        ) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        } else {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      }
+
+      var toggleElements = document.querySelectorAll(".theme i");
+      for (var i = 0; i < toggleElements.length; i++) {
+        toggleElements[i].addEventListener("click", function () {
+          var currentTheme =
+            document.documentElement.getAttribute("data-theme");
+          if (currentTheme === "light") {
+            document.documentElement.setAttribute("data-theme", "dark");
+            localStorage.setItem("theme", "dark");
+          } else {
+            document.documentElement.setAttribute("data-theme", "light");
+            localStorage.setItem("theme", "light");
+          }
+        });
+      }
+    </script>
+    <script>
+      const letters = "<.>/?!@#$&*(){}[]|\\abcdefghijklmnopqrstuvwxyz";
+
+      let interval = null;
+
+      window.addEventListener("load", () => {
+        const h1 = document.querySelector("h1");
+        let iteration = 0;
+
+        clearInterval(interval);
+
+        interval = setInterval(() => {
+          h1.innerText = h1.innerText
+            .split("")
+            .map((letter, index) => {
+              if (index < iteration) {
+                return h1.dataset.value[index];
+              }
+
+              return letters[Math.floor(Math.random() * 26)];
+            })
+            .join("");
+
+          if (iteration >= h1.dataset.value.length) {
+            clearInterval(interval);
+          }
+
+          iteration += 1 / 3;
+        }, 50);
+      });
+    </script>
+
+    <script
+      src="https://kit.fontawesome.com/9389365097.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
